@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        body {
+            background: #34495e;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 120px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+
+        }
+        .data-imags{
+            width:300px;
+            height:500px;
+            background: #fff;
+        }
+        .data-imags img{
+            width:300px;
+            height:300px;
+        }
+        .data-imags h5{
+            text-align: center;
+        }
+        .data-imags p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode9.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode20.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode11.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode13.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode14.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode15.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode19.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode16.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode17.jpg">
+                <h5>john brach</h5>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="data-imags">
+                <img src="../img/icode18.jpg">
+                <h5>john brach</h5>
+                <p>这是风景旅游图片</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="../package/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+</body>
+
+</html>

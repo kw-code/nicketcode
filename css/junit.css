@@ -1,0 +1,25 @@
+div{
+    max-width:50%;
+    height:auto;
+    margin:50px auto;
+
+}
+div input{
+    border:0;
+    padding:0 0 10px 10px ;
+    font-size: 22px;
+    font-weight:bolder;
+    color:#bd2130;
+    border-bottom: 1px solid #3e8f3e;
+    box-shadow: 0 0 0  5px #34ce57;
+
+}
+/*section{
+        这个里面是设置背景图片
+            background:white;
+            !*background: url("../imgs/c4.jpg");*!
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+
+        }*/

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/css/font-awesome.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            /*background: #18191A;*/
+            /*overflow:hidden;*/
+        }
+        nav{
+            position:absolute;
+            top:30%;
+            left:30%;
+            transform: translate(-50% ,-50%);
+        }
+        nav .drop-btn{
+            width:400px;
+            background: #242526;
+            color:#b0b3b8;
+            line-height: 50px;
+            padding:0 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        nav .drop-btn span{
+            float:right;
+            line-height: 50px;
+            font-size: 28px;
+            cursor:pointer;
+        }
+        nav .wrapper{
+            position:absolute;
+            top:65px;
+            display: flex;
+            width:400px;
+            background: #242526;
+            overflow: hidden;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+           /* display:none;*/
+        }
+        nav .wrapper.show{
+            display: block;
+            display: flex;
+        }
+        nav .wrapper ul{
+            list-style: none;
+            width:400px;
+            padding:10px;
+            transition: all 0.3s ease;
+        }
+        nav .wrapper ul li{
+            line-height: 50px;
+        }
+        nav .wrapper ul li a{
+            position: relative;
+            text-decoration: none;
+            color:#b0b3b8;
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            padding:0 10px;
+            align-items: center;
+            border-radius: 8px;
+        }
+        nav .wrapper ul li:hover a{
+            background: #3A3B3C;
+        }
+        nav .wrapper ul li a .icon{
+            height:40px;
+            width:40px;
+            margin-right: 13px;
+            background: #ffffff1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 50%;
+        }
+        nav .wrapper ul li a i{
+            position:absolute;
+            right:10px;
+            font-size: 25px;
+            pointer-events: none;/*值为none 时，元素永远不会成为鼠标事件的target。
+            但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素
+            ，在这种情况下，鼠标事件将在捕获或冒泡阶段触发元素的事件侦听器。
+            */
+        }
+        .wrapper ul .arrow{
+            padding-left:10px;
+            color:#b0b3b8;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+
+        }
+        .wrapper .setting-drop ul span{
+            margin-right:15px;
+        }
+        nav .wrapper .setting-drop,
+        nav .wrapper .help-drop{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <div class="drop-btn">
+        Drop down <span class="fa fa-caret-down"></span>
+    </div>
+    <div class="wrapper">
+        <ul class="menu-bar">
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-home"></span></div>Home</a>
+
+            </li>
+            <li class="setting-item">
+                <a href="#"><div class="icon"><span class="fa fa-cog"></span></div>
+                    Settings & privacy<i class="fa fa-angle-right"></i>
+                </a>
+
+            </li>
+
+            <li class="help-item">
+                <a href="#"><div class="icon"><span class="fa fa-question-circle"></span></div>
+                    Help & support<i class="fa fa-angle-right"></i>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-user"></span></div>About us</a>
+
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-comment"></span></div>Feedback</a>
+
+            </li>
+        </ul>
+
+        <!--setting &help menu-items-->
+
+        <ul class="setting-drop">
+            <li class="arrow back-setting-btn"><span class="fa fa-arrow-left"></span>Setting & privacy</li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-user"></span></div>Person info</a>
+
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-lock"></span></div>
+                    password
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-address-book"></span></div>
+                    Activity log
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-globe"></span></div>Languages</a>
+
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-sign-out"></span></div>Log out</a>
+
+            </li>
+        </ul>
+        <!--help & support Menu-item-->
+
+        <ul class="help-drop">
+            <li class="arrow back-help-btn"><span class="fa fa-arrow-left"></span>help & support</li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-question-circle"></span></div>Help centre</a>
+
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-envelope"></span></div>
+                    Support inbo
+                </a>
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-comment"></span></div>
+                    Send Feedback
+                </a>
+            </li>
+            <li>
+                <a href="#"><div class="icon"><span class="fa fa-exclamation-circle"></span></div>Report problem</a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<script>
+  const drop_btn=document.querySelector(".drop-btn");
+  const menu_wrapper=document.querySelector(".wrapper");
+  const menu_bar=document.querySelector(".menu-bar");
+  const setting_drop=document.querySelector(".setting-drop");
+  const help_drop=document.querySelector(".help-drop");
+  const setting_item=document.querySelector(".setting-item");
+  const help_item=document.querySelector(".help-item");
+  const back_setting_btn=document.querySelector(".back-setting-btn");
+  const back_help_btn=document.querySelector(".back-help-btn");
+  drop_btn.onclick=(()=>{
+      menu_wrapper.classList.toggle("show");
+  })
+
+  setting_item.onclick=(()=>{
+      menu_bar.style.marginLeft="-400px";
+      setTimeout(()=>{
+          setting_drop.style.display="block";
+      },100)
+
+  })
+  help_item.onclick=(()=>{
+      menu_bar.style.marginLeft="-400px";
+      setTimeout(()=>{
+          help_drop.style.display="block";
+      },100)
+
+  })
+
+  back_setting_btn.onclick=(()=>{
+      menu_bar.style.marginLeft="0px";
+      setting_drop.style.display="none";
+  })
+  back_help_btn.onclick=(()=>{
+      menu_bar.style.marginLeft="0px";
+      help_drop.style.display="none";
+  })
+
+</script>
+
+</body>
+</html>

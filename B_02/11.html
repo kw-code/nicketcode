@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS grid </title>
+    <style>
+        .wrapper{
+            display: grid;
+            /*grid-template-columns: 1fr 1fr 1fr;!*设置列宽，当我们设置的值一样是，可以用repeat函数*!*/
+            grid-template-columns: repeat(3,1fr);/*下面这行等同于上面这种设置*/
+            grid-gap:1rem;/*设置行，列间距，相当于margin属性*/
+            grid-auto-rows: 100px;/*设置一行中每个div的高度为100px*/
+            grid-auto-rows: minmax(100px,auto);/*此属性设置当内容区域大于div高度时有内容自动撑开*/
+        }
+        .wrapper>div{
+            padding:1rem;
+            background: #eee;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1rem;
+            grid-auto-rows: 70px;/*设置div行高为70px*/
+        }
+        .nested>div{
+            padding:1rem;
+            border: 1px solid #000;
+
+        }
+        .wrapper div:nth-child(odd){
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div>hello,world</div>
+    <div> How to Find Happiness Without Buying It,
+         Our materialistic society has led us to believe that happiness cannot be obtained without having money.
+         Rather than learning to be satisfied with what we have.
+        How to Find Happiness Without Buying It,
+        Our materialistic society has led us to believe that happiness cannot be obtained without having money.
+        Rather than learning to be satisfied with what we have.</div>
+    <div>hello,world</div>
+    <div>hello,world</div>
+    <div class="nested">
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+        <div>lerom</div>
+    </div>
+    <div>hello,world</div>
+    <div>hello,world</div>
+    <div>hello,world</div>
+
+</div>
+
+</body>
+</html>

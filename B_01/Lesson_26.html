@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex的弹性布局</title>
+    <style>
+        .father{
+            display: flex;
+            width:800px;
+            height:400px;
+            background:pink;
+            /*换行*/
+            flex-wrap:wrap;
+            /*因为有了换行。此时我们侧轴上控制子元素的对齐方式我们用align-content*/
+            /*align-content: flex-start;*/
+            /*居中显示*/
+            /*align-content: center;*/
+            align-content:space-between;
+        }
+        .father span{
+            margin:10px;
+            width:150px;
+            height:100px;
+            background:#03a9f4;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="father">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css grid布局</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 10px;/*设置列间距*/
+            grid-row-gap: 10px;/*设置行间距，当行列间距一样时，可以用下面这个属性代替 grid-gap:属性进行设置*/
+        }
+        .wrapper>div{
+            padding: 20px;
+            background-color: #eee;
+        }
+        .wrapper>div:nth-child(odd){
+            background: #ddd;
+        }
+        .box{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: stretch;
+            grid-gap: 1rem;
+        }
+        .box div{
+            text-align: center;
+            line-height: 100%;
+            border:1px solid #34ce57;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div>
+        How to Find Happiness Without Buying It,
+        Rather than learning to be satisfied with what we have.
+       </div>
+    <div class="box">
+        <div clas="box1">box1</div>
+        <div clas="box1">box2</div>
+        <div clas="box1">box3</div>
+    </div>
+
+    <div>
+    How to Find Happiness Without Buying It,
+    Our materialistic society has led us to believe that happiness cannot be obtained without having money.
+    Rather than learning to be satisfied with what we have.
+     </div>
+<div>
+    Our materialistic society has led us to believe that happiness cannot be obtained without having money.
+    trying to talk us into will provide us with the psychological comfort we are looking for
+</div>
+
+</div>
+
+</body>
+</html>

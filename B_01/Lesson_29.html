@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform动画3D</title>
+    <style>
+        .wrap{
+            width:500px;
+            height:500px;
+            margin:100px auto;
+            /*设置3D的井深,实现3D的效果必须的属性，距离越小越明显，反之亦然*/
+            perspective: 800px;
+            /*在当前看3D效果的位置*/
+            perspective-origin: center center;
+           /*设置3D的效果*/
+            transform-style: preserve-3d;
+        }
+        .son{
+            width:200px;
+            height:200px;
+            margin-bottom:10px;
+            background:blue;
+        }
+        .son:nth-child(1):hover{
+          /*  transform:rotateX(40deg) translateX(100px);*/
+            transform:translateZ(100px);
+        }
+        .son:nth-child(2):hover{
+            transform:rotateY(40deg) translateY(100px);
+        }
+        .son:nth-child(3):hover{
+            transform:rotateZ(40deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="son">
+
+    </div>
+    <div class="son">
+
+    </div>
+    <div class="son">
+
+</div>
+</div>
+</body>
+</html>

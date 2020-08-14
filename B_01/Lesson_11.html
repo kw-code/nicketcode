@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap 按钮组下拉菜单</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn-group">
+            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                按钮组下拉菜单
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="dropdown-item"> 1</a></li>
+                <li><a href="#" class="dropdown-item"> 2</a></li>
+                <li><a href="#" class="dropdown-item"> 3</a></li>
+                <li><a href="#" class="dropdown-item"> 4</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button  type="button" class="btn btn-info">分列式菜单</button>
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="dropdown-item">点我</a></li>
+                <li><a href="#" class="dropdown-item">点我</a></li>
+                <li><a href="#" class="dropdown-item">点我</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

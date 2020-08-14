@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap下拉菜单</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+       <div class="dropdown ">
+           <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+               下拉菜单
+            <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+               <li><a href="#" role="menuitem">一</a></li>
+               <li><a href="#" role="menuitem">二</a></li>
+               <li><a href="#" role="menuitem">三</a></li>
+               <li><a href="#" role="menuitem">四</a></li>
+               <li role="presentation" class="dropdown-header">小写一到四</li>
+               <li role="presentation" class="dropdown-divider"></li>
+               <li><a href="#" role="menuitem">1</a></li>
+               <li><a href="#" role="menuitem">2</a></li>
+               <li class="disabled"><a href="#" role="menuitem">3</a></li>
+               <li><a href="#" role="menuitem">4</a></li>
+           </ul>
+       </div>
+
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

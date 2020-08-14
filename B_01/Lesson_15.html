@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap 弹出提示框</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="toast" data-delay="500" id="myToast" data-autohide="false" style="position:fixed;top:10px;right:10px;">
+            <div class="toast-header">
+                <img src="../images/logo.jpg" alt="" width="20" class="rounded mr-2">
+                <strong class="mr-auto">标题</strong>
+                <small>1分钟前</small>
+                <button class="close mb-1 ml-2" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">你好!这是一个弹出提示框</div>
+        </div>
+
+        1234544
+        <p>
+            <button class="btn btn-secondary" id="btn1">TOAST</button>
+        </p>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#btn1").click(function(){
+
+            $("#myToast").toast("show");
+
+        })
+
+
+    </script>
+
+</body>
+</html>

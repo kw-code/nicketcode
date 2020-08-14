@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转立方体</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-image: url("../images/c5.jpg");
+            background-repeat: no-repeat;
+            background-size:100% auto;
+        }
+        .wrapper{
+            width:500px;
+            height:500px;
+            margin:250px auto;
+            perspective: 1200px;
+        }
+        .bigbox{
+            width:200px;
+            height:200px;
+            position:relative;
+            transform-style: preserve-3d;
+            animation: move 2s infinite linear;
+            transform-origin: center center 100px;
+        }
+        .wrapper div{
+            width:200px;
+            height:200px;
+            position: absolute;
+            color:#fff;
+            line-height: 200px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bolder;
+        }
+        .wrapper .bigbox .box1{
+            opacity: 0.5;
+            background-color: #34ce57;
+
+        }
+        .wrapper .bigbox .box2{
+            opacity: 0.5;
+            background-color:#245580;
+            transform: translateX(200px) rotateY(-90deg);
+            transform-origin:left;
+        }
+        .wrapper .bigbox .box3{
+            opacity: 0.5;
+            background-color: #8a6d3b;
+            transform: translateX(-200px) rotateY(90deg);
+            transform-origin:right;
+        }
+        .wrapper .bigbox .box4{
+            opacity: 0.5;
+            background-color:purple;
+            transform: translateY(-200px) rotateX(-90deg);
+            transform-origin:bottom;
+        }
+        .wrapper .bigbox .box5{
+            opacity: 0.5;
+            background-color: red;
+            transform: translateY(200px) rotateX(90deg);
+            transform-origin: top;
+        }
+        .wrapper .bigbox .box6{
+            opacity: 0.5;
+            background-color:#20c997;
+            transform: translateZ(200px);
+
+        }
+        @keyframes  move{
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+                  }
+        }
+
+    </style>
+
+</head>
+<body>
+<!--
+其中 left,center right是水平方向取值，对应的百分值为left=0%;center=50%;right=100%
+
+而
+
+top center bottom是垂直方向的取值，其中top=0%;center=50%;bottom=100%;
+
+如果只取一个值，表示垂直方向值不变。
+
+注：
+
+transform-origin并不是transform中的属性值，他具有自己的语法。
+
+但是他要结合transform才能起作用。
+
+作者：Mandy_jin
+链接：https://www.jianshu.com/p/04a5775e112e
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。-->
+<div class="wrapper">
+    <div class="bigbox">
+        <div class="box1">i love you</div>
+        <div class="box2">i love you</div>
+        <div class="box3">i love you</div>
+        <div class="box4">i love you</div>
+        <div class="box5">i love you</div>
+        <div class="box6">i love you</div>
+    </div>
+</div>
+
+</body>
+</html>

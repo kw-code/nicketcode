@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex的弹性布局</title>
+    <style>
+        .father{
+            display: flex;
+            width:800px;
+            height:400px;
+            background:pink;
+            /*默认主轴是x row轴*/
+            flex-direction: column;/**/
+            justify-content: center;
+            /*我们需要一个侧轴居中*/
+            align-items: center;
+        /*align-content:设置侧轴上的子元素的排列方式（多行）
+        设置子项在侧轴上的排列方式并且只能用于子项出现换行的情况（多行），在单行下是没有效果的
+        */
+
+        }
+        .father span:nth-of-type(1){
+            width:150px;
+            height:200px;
+            background:red;
+        }
+        .father span:nth-of-type(2){
+            width:150px;
+            height:200px;
+            background:#34ce57;
+        }
+        .father span:nth-of-type(3){
+            width:150px;
+            height:200px;
+            background:#03a9f4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+
+</body>
+</html>

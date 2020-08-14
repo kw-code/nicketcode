@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>局部导航学习</title>
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/junit.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+           $(".nav-tabs li").each(function(index,args){
+               if($(args).hasClass("active")){
+                   $(".conment .content").eq(index).show().siblings().hide();
+               }
+
+           })
+            $(".nav-tabs ").find("li").on("click","a",function(){
+               var index=$(this).parent().index();
+                $(".conment .content").eq(index).show().siblings().hide();
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#p0">首页</a></li>
+        <li><a href="#p1">天狼工作室</a></li>
+        <li><a href="#p2">联系我们</a></li>
+    </ul>
+    <div class="conment">
+        <div class="content" id="p0">
+            A Survey of the University----p1
+            Binzhou Medical University is a common medical university at provincial level in Shandong Province，
+            and its predecessor was the Public Medical School of Shandong University originally established in 1946. The university follows its school-running tradition that “teaching comes first,
+            and quality is prior to any others” and that “the education of man is a fundamental, and moral education has the priority”,
+            and puts into practices its university dictum of “benevolent mind and wonderful skills”. Sticking to the centeredness on the cultivation of talents and that...
+
+        </div>
+        <div class="content" id="p1">
+            我爱我们的祖国，我生长在这个美丽的国家，我们的国家很强大，我的国家有56个名族，有960万平方公里的国土，是世界第二大经济体；
+            在1949年10月1日成立，
+        </div>
+        <div class="content" id="p2">
+        A Survey of the University----p3
+        Binzhou Medical University is a common medical university at provincial level in Shandong Province，
+        and its predecessor was the Public Medical School of Shandong University originally established in 1946. The university follows its school-running tradition that “teaching comes first,
+        and quality is prior to any others” and that “the education of man is a fundamental, and moral education has the priority”,
+        and puts into practices its university dictum of “benevolent mind and wonderful skills”. Sticking to the centeredness on the cultivation of talents and that...
+    </div>
+    </div>
+    <br />
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">国内</a></li>
+        <li><a href="#">国际</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <div class="well">
+        A Survey of the University
+        Binzhou Medical University is a common medical university at provincial level in Shandong Province，
+        and its predecessor was the Public Medical School of Shandong University originally established in 1946. The university follows its school-running tradition that “teaching comes first,
+        and quality is prior to any others” and that “the education of man is a fundamental, and moral education has the priority”,
+        and puts into practices its university dictum of “benevolent mind and wonderful skills”. Sticking to the centeredness on the cultivation of talents and that...
+
+    </div>
+    <br />
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">国内</a></li>
+        <li><a href="#">国际</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <div class="vaov">
+        A Survey of the University
+        Binzhou Medical University is a common medical university at provincial level in Shandong Province，
+        and its predecessor was the Public Medical School of Shandong University originally established in 1946. The university follows its school-running tradition that “teaching comes first,
+        and quality is prior to any others” and that “the education of man is a fundamental, and moral education has the priority”,
+        and puts into practices its university dictum of “benevolent mind and wonderful skills”. Sticking to the centeredness on the cultivation of talents and that...
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

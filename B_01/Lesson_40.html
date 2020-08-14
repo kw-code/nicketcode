@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框特效动画</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            background: #2ec194;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper{
+            width:600px;
+            padding:30px;
+            background:#fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .wrapper .input-data{
+            width:100%;
+            height:40px;
+            position:relative;
+
+        }
+        .wrapper .input-date input{
+            width:100%;
+            height:100%;
+            border: 0;
+            font-size: 17px;
+            border-bottom:2px solid silver;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="input-data">
+        <input type="text"/>
+        <label>Name</label>
+    </div>
+</div>
+
+</body>
+</html>

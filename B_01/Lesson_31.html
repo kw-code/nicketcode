@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3之@keyframes动画</title>
+    <style>
+        .wrap{
+            width:200px;
+            height:200px;
+            background-color: #03a9f4;
+            margin:100px auto;
+            /*动画的名字*/
+           /* animation-name:change;
+            !*过渡时间*!
+            animation-duration: 2s;
+            !*设置动画匀速*!
+            animation-timing-function: linear;
+            !*设置延时执行动画*!
+            animation-delay: 2s;
+            !*s设置动画播放的次数，默认只有一次，infinite表示无限循环*!
+            animation-iteration-count: infinite;*/
+            /*设置综合属性*/
+            animation:change 2s linear infinite;
+        }
+        .wrap:hover{
+            /*鼠标悬浮的时候停止动画 paused:停止动画；
+            running:动画一直跑
+            */
+            animation-play-state: paused;
+        }
+        @keyframes change {
+
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+    </div>
+</body>
+</html>

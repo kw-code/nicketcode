@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变</title>
+    <style>
+        .wrap{
+            width:200px;
+            height:200px;
+           /* background:-webkit-linear-gradient(to left,red,blue,yellow,green);*//*设置渐变色属性,注意浏览器的兼容性
+            to left，to bottom等
+            第一个参数表示渐变色的方向*/
+            /*重复的线性渐变*/
+           /* background:repeating-linear-gradient(blue,red 10%,yellow 20%);*/
+            /*镜像渐变，可以做圆 ,可以左椭圆*/
+           /* background:radial-gradient(circle,red,yellow,black 50%);*/
+           /* background:radial-gradient(red 5%,blue 15%,yellow 60%);*/
+           /* 重复性的镜像渐变*/
+            background:-webkit-repeating-radial-gradient(red,yellow 10%,green 15%);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav滑动导航学习</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: 'Open Sans',sans-serif;
+            background-color: #2c3e50;
+        }
+        nav{
+            position: relative;
+            margin:270px auto 0;
+            width:590px;
+            height:50px;
+            background-color: #34495e;
+            border-radius: 8px;
+            font-size: 0;
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+        }
+        nav a{
+            font-size: 15px;
+            text-transform: uppercase;
+            color:#fff;
+            text-decoration: none;
+            line-height: 50px;
+            position: relative;
+            z-index:1;
+            display: inline-block;
+            text-align: center;
+        }
+        nav .animation{
+            position: absolute;
+            height:100%;
+            bottom:0;
+            z-index:0;
+            background: #1abc9c;
+            width:100px;
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+        }
+        a:nth-child(1){
+            width:100px;
+        }
+        nav .start-home,a:nth-child(1):hover~.animation{
+            width:100px;
+            left:0;
+
+        }
+        a:nth-child(2){
+            width:110px;
+        }
+        nav .start-home,a:nth-child(2):hover~.animation{
+            width:110px;
+            left:100px;
+
+        }
+        a:nth-child(3){
+            width:100px;
+        }
+        nav .start-home,a:nth-child(3):hover~.animation{
+            width:100px;
+            left:210px;
+
+        }
+        a:nth-child(4){
+            width:160px;
+        }
+        nav .start-home,a:nth-child(4):hover~.animation{
+            width:160px;
+            left:310px;
+
+        }
+        a:nth-child(5){
+            width:120px;
+        }
+        nav .start-home,a:nth-child(5):hover~.animation{
+            width:120px;
+            left:470px;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">about</a>
+        <a href="#">blog</a>
+        <a href="#">services</a>
+        <a href="#">link</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+
+
+    <P>
+        translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中.。
+
+        当使用：top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置
+
+        translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置。
+
+    </P>
+</body>
+</html>

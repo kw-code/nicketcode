@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧边导航</title>
+    <link rel="stylesheet" href="../css/css/font-awesome.css">
+    <script src="../"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            font-family:'Roboto',sans-serif;
+        }
+        .wrapper{
+            position: fixed;
+            left:-250px;
+            width:250px;
+            height:100%;
+            background:#042331;
+            transition: all 0.5s ease;
+        }
+        .wrapper header{
+            font-size: 22px;
+            color:white;
+            text-align: center;
+            line-height: 70px;
+            background: #063146;
+            user-select: none;
+        }
+        .wrapper ul a{
+            display: block;
+            height:100%;
+            width:100%;
+            line-height: 65px;
+            font-size: 18px;
+            color:white;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom:1px solid black;
+            transition: 0.4s;
+        }
+        ul li:hover a{
+            padding-left: 60px;
+        }
+        .wrapper ul a i{
+            margin-right: 16px;
+        }
+        #check{
+            display: none;
+        }
+        label #btn,label #cancel{
+            position:absolute;
+            cursor:pointer;
+            background: #042331;
+            border-radius: 3px;
+        }
+        label #btn{
+            left:40px;
+            top:25px;
+            font-size: 35px;
+            color:white;
+            padding:6px 12px;
+            transition:all 0.5s;
+        }
+        label #cancel{
+            z-index:1111;
+            left:-195px;
+            top:17px;
+            font-size: 30px;
+            color:#0a5275;
+            padding:4px 9px;
+            transition: all 0.5s ease;
+
+        }
+        #check:checked ~ .wrapper{
+            left:0;
+        }
+        #check:checked ~ label #btn{
+            left:250px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left:195px;
+        }
+        section{
+            background:url("../images/c4.jpg") no-repeat;
+            background-position: center;
+            background-size: cover;
+            height:100vh;
+            transition: all 0.5s;
+        }
+        #check:checked ~ section{
+            margin-left: 250px;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+    <div class="wrapper">
+        <header>MyApp</header>
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-comment"></i>message</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i>About us</a></li>
+            <li><a href="#"><i class="fa fa-question-circle"></i>help</a></li>
+            <li><a href="#"><i class="fa fa-link"></i>Connect</a></li>
+            <li><a href="#"><i class="fa fa-amazon"></i>services</a></li>
+            <li><a href="#"><i class="fa fa-search"></i>community</a></li>
+            <li><a href="#"><i class="fa fa-cog"></i>settins</a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i>contact</a></li>
+
+        </ul>
+    </div>
+    <section></section>
+
+
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+</head>
+<style>
+    .Tool{
+        margin-top:20px;
+    }
+    .Tool li{
+        margin:20px;
+        border:solid 1px  black;
+        border-radius: 3px;
+        text-align: center;
+        background:#23272b;
+
+    }
+.Tool li a{
+    color:white;
+}
+.Tool li:hover{
+    background: #4e555b;
+}
+
+</style>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+    <a href="#" class="navbar-brand">
+        <img src="../images/logo.jpg" alt="" width="30" height="30" class="d-inline-block align-top">
+        IT博客园</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">新随笔</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">联系</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">管理</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">订阅</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">学习园地</a>
+                <div class="dropdown-menu" role="menu">
+                    <a href="#" class="dropdown-item">java基础</a>
+                    <a href="#" class="dropdown-item">HTML css</a>
+                    <a href="#" class="dropdown-item">C++</a>
+                    <a href="#" class="dropdown-item">spring</a>
+                    <a href="#" class="dropdown-item">meven</a>
+                    <a href="#" class="dropdown-item">mysql</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">博客园简介</a>
+            </li>
+        </ul>
+    <form action="" class="form-inline my-2 my-md-0 ml-auto">
+        <input type="text" class="form-control mr-sm-2" placeholder="请输入关键字">
+        <button class="btn btn-outline-success my-2 my-md-0">搜索</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+        <li><a href="Login.html" class="nav-link" >登录</a></li>
+        <li><a href="#" class="nav-link">退出</a></li>
+    </ul>
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">欢迎登录博客园!</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <label>用户名：</label>
+                            <input type="text" class="form-control" placeholder="请输入用户名">
+                        </p>
+                        <p>
+                            <label>密码：</label>
+                            <input type="password" class="form-control" placeholder="请输入密码">
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button"  data-dismiss="modal">取消</button>
+                        <button class="btn btn-primary" type="button">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>m
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2">
+            <div class="Tool">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">学习交流</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">学习计划</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">资源信息</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">世界</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" >练习</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" >介绍</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" >力扣刷题</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-10 auto">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>
+                    这是一个基本面板
+                    在Spring AOP编程中：
+                    分离了重复代码：关注点
+                    关注点代码：产生类即切面类
+                     
+
+                    一、使用 AspectJ实现 AOP（注解方式）：
+                    导包
+                    spring-aop
+                    spring-core
+                    aspectjrt
+                    aspectjweaver
+                    aopalliance
+                    配置文件（开启代理模式）
+                    开启注解扫描
+                    1
+                    切面类
+                    @Component
+                    @Aspect：说明这是一个切面类
+                    @Before：业务代码之前执行
+                    @After：业务代码之后执行，无论是否出现异常都执行
+                    @AfterReturning：业务代码后执行，若出现异常不执行
+                    @AfterThrowing：业务代码后，出现异常执行（即@AfterReturning与@AfterThrowing 两者不会同时存在）
+                    @Around：环绕业务代码，有参数joinPoint：joinPoint.proceed();方法proceed()相当于目标对象业务代码中的save();
+                    切入点表达式（exection( * * . *(. .))）
+                    exection( * * . *(. .)) 即
+                    exection( 返回类型 类的完全限定名. 方法名(参数))（返回类型前的修饰符如public可写可不写）
+                    实现接口的类，Spring默认使用JDK代理；未实现接口的类，Spring默认使用Cglib代理
+                    </p><hr>
+                    <p>
+                        这是一个基本面板
+                        在Spring AOP编程中：
+                        分离了重复代码：关注点
+                        关注点代码：产生类即切面类
+                         
+
+                        一、使用 AspectJ实现 AOP（注解方式）：
+                        导包
+                        spring-aop
+                        spring-core
+                        aspectjrt
+                        aspectjweaver
+                        aopalliance
+                        配置文件（开启代理模式）
+                        开启注解扫描
+                        1
+                        切面类
+                        @Component
+                        @Aspect：说明这是一个切面类
+                        @Before：业务代码之前执行
+                        @After：业务代码之后执行，无论是否出现异常都执行
+                        @AfterReturning：业务代码后执行，若出现异常不执行
+                        @AfterThrowing：业务代码后，出现异常执行（即@AfterReturning与@AfterThrowing 两者不会同时存在）
+                        @Around：环绕业务代码，有参数joinPoint：joinPoint.proceed();方法proceed()相当于目标对象业务代码中的save();
+                        切入点表达式（exection( * * . *(. .))）
+                        exection( * * . *(. .)) 即
+                        exection( 返回类型 类的完全限定名. 方法名(参数))（返回类型前的修饰符如public可写可不写）
+                        实现接口的类，Spring默认使用JDK代理；未实现接口的类，Spring默认使用Cglib代理
+                    </p><hr>
+                    <p>
+                        这是一个基本面板
+                        在Spring AOP编程中：
+                        分离了重复代码：关注点
+                        关注点代码：产生类即切面类
+                         
+
+                        一、使用 AspectJ实现 AOP（注解方式）：
+                        导包
+                        spring-aop
+                        spring-core
+                        aspectjrt
+                        aspectjweaver
+                        aopalliance
+                        配置文件（开启代理模式）
+                        开启注解扫描
+                        1
+                        切面类
+                        @Component
+                        @Aspect：说明这是一个切面类
+                        @Before：业务代码之前执行
+                        @After：业务代码之后执行，无论是否出现异常都执行
+                        @AfterReturning：业务代码后执行，若出现异常不执行
+                        @AfterThrowing：业务代码后，出现异常执行（即@AfterReturning与@AfterThrowing 两者不会同时存在）
+                        @Around：环绕业务代码，有参数joinPoint：joinPoint.proceed();方法proceed()相当于目标对象业务代码中的save();
+                        切入点表达式（exection( * * . *(. .))）
+                        exection( * * . *(. .)) 即
+                        exection( 返回类型 类的完全限定名. 方法名(参数))（返回类型前的修饰符如public可写可不写）
+                        实现接口的类，Spring默认使用JDK代理；未实现接口的类，Spring默认使用Cglib代理
+                    </p><hr>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

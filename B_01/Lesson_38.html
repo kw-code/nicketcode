@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出消息提示框</title>
+    <link rel="stylesheet" href="../css/css/font-awesome.css" type="text/css">
+    <style>
+        dialog{
+            background-color: #fff;
+            border-color: #faecd8;
+            color:#e6a23c;
+            top:150px;
+            width:250px;
+            border-radius: 10px;
+            border-width: 1px;
+            transition:opacity 0.3s,transform 0.4s;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        div{
+            font-size: 18px;
+            font-weight: bolder;
+            color:#096;
+        }
+
+    </style>
+</head>
+<body>
+<dialog id="showDialodg">
+    <div>添加成功！
+        <i class="fa fa-check-square" aria-hidden="true"></i>
+    </div>
+</dialog>
+<script>
+    var dialog=document.getElementsByTagName("dialog")[0],
+        opendialog=document.getElementById("open_dialog"),
+        closeDialog=document.getElementById("close_dialog");
+        dialog.showModal();
+
+</script>
+</body>
+</html>

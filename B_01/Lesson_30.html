@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition过渡 动画</title>
+    <style>
+        .wrap{
+            width:200px;
+            height:200px;
+            background-color:#096;
+           /* transition-property: all;!*设置过渡属性 ,all表示所有属性*!
+            transition-duration: 3s;!*设置过渡时间*!
+            !*过渡函数，linear--》表示匀速 ease-->慢，块，慢*!
+            transition-timing-function: linear;
+            !*过渡延时执行*!
+            transition-delay: 2s;*/
+            /*综合设置*/
+          transition:all 2s linear 2s;
+        }
+        .wrap:hover{
+         /*   background-color:red;*/
+            margin-left:500px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+</div>
+</body>
+</html>
